@@ -67,7 +67,7 @@ See [growth-log-methodology.md](growth-log-methodology.md) for the full methodol
 
 The concepts originated in [Everything Claude Code (ECC)](https://github.com/affaan-m/ECC) as `delivery-gate` (a Stop hook) and `growth-log` (a skill). This repository is the independent, generalized community space for these ideas.
 
-- **delivery-gate.js** — ~460 lines, Node.js, zero npm dependencies. Checks disk space + learning library freshness via filesystem timestamps. Fail-open throughout. Supports project-scoped memory via `CLAUDE_PROJECT_DIR` and cross-platform disk checks (Windows wmic/PowerShell, GNU df -BG + POSIX df -Pk fallback). See [ECC scripts/hooks/delivery-gate.js](https://github.com/affaan-m/ECC/blob/main/scripts/hooks/delivery-gate.js).
+- **delivery-gate.js** — ~490 lines, Node.js, zero npm dependencies. Checks disk space + learning library freshness via filesystem timestamps. Fail-open throughout. Supports project-scoped memory via `CLAUDE_PROJECT_DIR` and cross-platform disk checks (Windows wmic/PowerShell, GNU df -BG + POSIX df -Pk fallback). See [ECC scripts/hooks/delivery-gate.js](https://github.com/affaan-m/ECC/blob/main/scripts/hooks/delivery-gate.js).
 - **growth-log SKILL.md** — Methodology documentation with pre-check, entry template, anti-patterns, and quality checklist. See [ECC skills/growth-log/SKILL.md](https://github.com/affaan-m/ECC/blob/main/skills/growth-log/SKILL.md).
 
 ## Getting Started
