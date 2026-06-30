@@ -136,7 +136,7 @@ The methodology works with any system:
 
 The framework addresses the two reasons learning capture fails:
 
-1. **We forget** → The gate reminds you (mechanical, not willpower-based)
-2. **We write useless entries** → The methodology teaches you what a useful entry looks like
+1. **We forget** → A delivery gate (mechanical hook that checks file timestamps at session end) reminds you — no willpower required
+2. **We write useless entries** → This methodology teaches you what a useful entry looks like
 
-Together they close the loop: gate enforces the habit, methodology ensures the content is worth capturing.
+Together they close the loop: the gate enforces the habit, the methodology ensures the content is worth capturing. Either component works independently — use the methodology with a calendar reminder, or use the gate with your own note-taking approach.
