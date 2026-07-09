@@ -70,6 +70,22 @@ The concepts originated in [Everything Claude Code (ECC)](https://github.com/aff
 - **delivery-gate.js** — ~490 lines, Node.js, zero npm dependencies. Checks disk space + learning library freshness via filesystem timestamps. Fail-open throughout. Supports project-scoped memory via `CLAUDE_PROJECT_DIR` and cross-platform disk checks (Windows wmic/PowerShell, GNU df -BG + POSIX df -Pk fallback). See [ECC scripts/hooks/delivery-gate.js](https://github.com/affaan-m/ECC/blob/main/scripts/hooks/delivery-gate.js).
 - **growth-log SKILL.md** — Methodology documentation with pre-check, entry template, anti-patterns, and quality checklist. See [ECC skills/growth-log/SKILL.md](https://github.com/affaan-m/ECC/blob/main/skills/growth-log/SKILL.md).
 
+## Validated: What the ECC Review Taught Us
+
+The delivery-gate module was submitted to ECC (200K+ stars). Maintainer daltino reviewed it over 4 rounds. 9 bugs were found before merge.
+
+Three lessons:
+
+1. stdin-stdout contracts break silently in hook frameworks. Worked locally; failed in target. Platform integration bugs are invisible to local testing.
+
+2. Bot review catches what manual testing misses. Python 3.8 compat, non-recursive scanning, missing exception handling — all caught by bots in seconds.
+
+3. Mechanical checks and AI review cover different things. Mechanical is 100% consistent but narrow. AI review covers quality but is probabilistic. Use both.
+
+The boundary between hard-block and soft-warn is remediability: can you fix this later? Learning not captured = unrecoverable = hard block.
+
+The same 200-line Python script that passed 4 rounds of community review is the reference implementation here.
+
 ## Getting Started
 
 ### For Claude Code users
